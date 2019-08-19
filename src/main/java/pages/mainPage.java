@@ -7,7 +7,8 @@ import org.openqa.selenium.WebElement;
 public class mainPage extends abstractPage {
     private static final String URL = "https://yandex.ru/";
     private final By searchInput = By.xpath("//*[@id=\"text\"]");
-    private final By fastAnswer = By.xpath("/html/body/div[6]/div/div/li[1]/span[last()]");
+    //тест может быть нестабильным из-за смены xPath элемента, как это произошло между написанием теста и git pull
+    private final By fastAnswer = By.xpath("/html/body/div[6]/div[2]/div/li[1]/span[last()]");
     private final By logo = By.xpath("//div[@class=\"home-logo\"]");
 
     public mainPage() {
